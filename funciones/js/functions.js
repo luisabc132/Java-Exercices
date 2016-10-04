@@ -155,9 +155,7 @@ console.log(calculateAverage(array_lengths));
 /*
 function charFreq( string ) {
 	freqCounter = {};
-    //array_palabras=[];
-    //var ca=0,cb=0,cc=0,cd=0,ce=0,cf=0,cg=0,ch=0,ci=0,cj=0,ck=0,cl=0,cm=0,cn=0,cñ=0,co=0,cp=0,cq=0,cr=0,cs=0,ct=0,cu=0,cv=0,cw=0,cx=0,cy=0,cz=0;
-    //array_palabras= string.split("");
+    
     for (i = 0;i < string.length; i++){
     	if (string[i] in freqCounter){
     		freqCounter[string[i]]+=1;
@@ -361,23 +359,54 @@ function beautifyLetters( array )
 
 function sortArray( array )
 {
+	array.sort(function(a, b){
+		if (typeof(a)=="string"){
+			c = a.toLowerCase();
+		}
+		else {
+			c = a;
+		}
+		if (typeof(b)=="string"){
+			d = b.toLowerCase();
+		}
+		else {
+			d = b;
+		}	
+			if (c > d) {
+				valor=1;		
+				} 
+			else if (c < d) {
+				valor= -1;
+			}
+			else{
+				valor=0;
+			}
+		
+		return valor;
+		
+	});
+	console.log(array);
 	//It receives an array with numbers and letters and returns it with its items sorted. Numbers on one side and letters on the other.
 	//Example: sortArray([5,5, 4, 1, 'j', A','b', 'E']) returns [1, 4, 5, 5, 'A', 'b', 'E', 'j']
+
 }
 
+*/
 
 function arrayToString( array )
 {
+	m=array.join("");
+	console.log(m);
 	//It receives an array and returns a string with all its elements.
 	//Example: arrayToString([1, 4, 5, 5, 'A', 'b', 'E', 'j']) returns "1455AbEj"
 }
-*/
 //console.log(arrayAwesomenator(["a", 6, "B", "F", "e", 8, 78, "J" ]) === "668Abfj");
 //console.log(arrayAwesomenator(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]) === "46688AAbcfjjqry");
 //console.log(deleteRubbish(["a", "*", "B", "F", "*", 8, 78, "J" ]));
 //console.log(arrangeElements(["a", 6, "B", "F", "*", 8, 78, "J" ]));
 //console.log(beautifyLetters([5, "j", "k", "q", "A", 8, 78, "o" ]));
 //console.log(beautifyNumbers([9956, "j", "k", "q", "A", 8, 78, "o" ]));
-
+//console.log(sortArray([5,5, 4, 1, "j", "A","b","E"]));
+console.log(arrayToString([1, 4, 5, 5, 'A', 'b', 'E', 'j']));
 
 
