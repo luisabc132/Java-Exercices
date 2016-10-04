@@ -151,161 +151,39 @@ console.log(calculateAverage(array_lengths));
 // As a condition you must use the object freqCounter.
 // Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 
-/*
 
+/*
 function charFreq( string ) {
 	freqCounter = {};
-    array_palabras=[];
-    var ca=0,cb=0,cc=0,cd=0,ce=0,cf=0,cg=0,ch=0,ci=0,cj=0,ck=0,cl=0,cm=0,cn=0,cñ=0,co=0,cp=0,cq=0,cr=0,cs=0,ct=0,cu=0,cv=0,cw=0,cx=0,cy=0,cz=0;
-    array_palabras= string.split("");
-   
-    for (i=0; i < array_palabras.length; i++){
-    	if (array_palabras[i] == "a"){
-    	
-    		freqCounter["a"] = ++ca;
+    //array_palabras=[];
+    //var ca=0,cb=0,cc=0,cd=0,ce=0,cf=0,cg=0,ch=0,ci=0,cj=0,ck=0,cl=0,cm=0,cn=0,cñ=0,co=0,cp=0,cq=0,cr=0,cs=0,ct=0,cu=0,cv=0,cw=0,cx=0,cy=0,cz=0;
+    //array_palabras= string.split("");
+    for (i = 0;i < string.length; i++){
+    	if (string[i] in freqCounter){
+    		freqCounter[string[i]]+=1;
     	}
-    	if (array_palabras[i] == "b"){
-    	
-    		freqCounter["b"] = ++cb;
+    	else{
+    		freqCounter[string[i]]=1;
     	}
-    	
-    	if (array_palabras[i] == "c"){
-    	
-    		freqCounter["c"] = ++cc;
-    	}
-    	
-    	if (array_palabras[i] == "d"){
-    	
-    		freqCounter["d"] = ++cd;
-    	}
-    	
-    	if (array_palabras[i] == "e"){
-    	
-    		freqCounter["e"] = ++ce;
-    	}
-    	
-    	if (array_palabras[i] == "f"){
-    	
-    		freqCounter["f"] = ++cf;
-    	}
-    	
-    	if (array_palabras[i] == "g"){
-    	
-    		freqCounter["g"] = ++cg;
-    	}
-    	
-    	if (array_palabras[i] == "h"){
-    	
-    		freqCounter["h"] = ++ch;
-    	}
-    	
-    	if (array_palabras[i] == "i"){
-    	
-    		freqCounter["i"] = ++ci;
-    	}
-    	
-    	if (array_palabras[i] == "j"){
-    	
-    		freqCounter["j"] = ++cj;
-    	}
-    	
-    	if (array_palabras[i] == "k"){
-    	
-    		freqCounter["k"] = ++ck;
-    	}
-    	
-    	if (array_palabras[i] == "l"){
-    	
-    		freqCounter["l"] = ++cl;
-    	}
-    	
-    	if (array_palabras[i] == "m"){
-    	
-    		freqCounter["m"] = ++cm;
-    	}
-    	
-    	if (array_palabras[i] == "n"){
-    	
-    		freqCounter["n"] = ++cn;
-    	}
-    	
-    	if (array_palabras[i] == "ñ"){
-    	
-    		freqCounter["ñ"] = ++cñ;
-    	}
-    	
-    	if (array_palabras[i] == "o"){
-    	
-    		freqCounter["o"] = ++co;
-    	}
-    	
-    	if (array_palabras[i] == "p"){
-    	
-    		freqCounter["p"] = ++cp;
-    	}
-    	
-    	if (array_palabras[i] == "q"){
-    	
-    		freqCounter["q"] = ++cq;
-    	}
-    	
-    	if (array_palabras[i] == "r"){
-    	
-    		freqCounter["r"] = ++cr;
-    	}
-    	
-    	if (array_palabras[i] == "s"){
-    	
-    		freqCounter["s"] = ++cs;
-    	}
-    	
-    	if (array_palabras[i] == "t"){
-    	
-    		freqCounter["t"] = ++ct;
-    	}
-    	
-    	if (array_palabras[i] == "u"){
-    	
-    		freqCounter["u"] = ++cu;
-    	}
-    	
-    	if (array_palabras[i] == "v"){
-    	
-    		freqCounter["v"] = ++cv;
-    	}
-    	
-    	if (array_palabras[i] == "w"){
-    	
-    		freqCounter["w"] = ++cw;
-    	}
-    	
-    	if (array_palabras[i] == "x"){
-    	
-    		freqCounter["x"] = ++cx;
-    	}
-    	
-    	if (array_palabras[i] == "y"){
-    	
-    		freqCounter["y"] = ++cy;
-    	}
+    }
+    console.log(freqCounter);
+    return freqCounter;
+}
 
-    	if (array_palabras[i] == "z"){
-    	
-    		freqCounter["z"] = ++cz;
-    	}
+charFreq("abbabcbdbabdbdbabababcbcbab")    
+
+   /*
     
 
 
 
-    }	
-     console.log(freqCounter);
 
 
 
     
 	
-	return freqCounter;
-}
+	
+
 
 counter = charFreq("abbabcbdbabdbdbabababcbcbab");
 console.log( counter['a'] === 7);
@@ -340,14 +218,14 @@ console.log( counter['f'] === 1 );
 // http://www.w3schools.com/js/default.asp
 // Use the search option in both of them to find a function.
 
-
+/*
 
 function arrayAwesomenator( array ) 
 {
 	//array = deleteRubbish( array );
 	//array = arrangeElements( array );
 	//array = beautifyLetters( array );
-	array = beautifyNumbers( array );
+	//array = beautifyNumbers( array );
 	//array = sortArray( array );
 	//array = arrayToString( array );
 
@@ -374,7 +252,7 @@ function deleteRubbish( array )
 		console.log(array[i]);
 	}
 */
-}
+
 
 
 function arrangeElements( array )
@@ -437,7 +315,7 @@ function beautifyLetters( array )
 }
 
 
-function beautifyNumbers( array )
+/*function beautifyNumbers( array )
 {
 	for (i=0; i < array.length; i++){
 		var c=0,ar=[],numero;
@@ -493,13 +371,13 @@ function arrayToString( array )
 	//It receives an array and returns a string with all its elements.
 	//Example: arrayToString([1, 4, 5, 5, 'A', 'b', 'E', 'j']) returns "1455AbEj"
 }
-
+*/
 //console.log(arrayAwesomenator(["a", 6, "B", "F", "e", 8, 78, "J" ]) === "668Abfj");
 //console.log(arrayAwesomenator(["*", "j", 6, "A", "F", "*", 8, "C", "b", "a", 78, "J", 43523, 1111, "r", "q", "y" ]) === "46688AAbcfjjqry");
 //console.log(deleteRubbish(["a", "*", "B", "F", "*", 8, 78, "J" ]));
 //console.log(arrangeElements(["a", 6, "B", "F", "*", 8, 78, "J" ]));
 //console.log(beautifyLetters([5, "j", "k", "q", "A", 8, 78, "o" ]));
-console.log(beautifyNumbers([9956, "j", "k", "q", "A", 8, 78, "o" ]));
+//console.log(beautifyNumbers([9956, "j", "k", "q", "A", 8, 78, "o" ]));
 
 
 
